@@ -21,7 +21,23 @@ function TomatoMenu()
 
 	this.mouseDown = function()
 	{
-		this.element.style.opacity = .5;
+
+		var baseMenu = document.getElementById('menu')
+		console.log(baseMenu.style.visibility)
+
+		if (baseMenu.style.visibility == "visible")
+		{
+			baseMenu.style.visibility = "hidden"
+			baseMenu.style.position = "fixed"
+			console.log("menu closed")
+		}
+		else if (baseMenu.style.visibility == "hidden")
+		{
+			baseMenu.style.position = "relative"
+			baseMenu.style.visibility = "visible"
+			console.log("menu open")
+		}
+
 	}
 
 	this.install(document.getElementById("main"));

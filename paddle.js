@@ -6,7 +6,8 @@ function Paddle()
 		this.element.setAttribute("src", "Paddle.svg");
 		this.element.style.width = "45%";
 		this.element.style.bottom = "-10%";
-		this.element.style.left = "28%"
+		this.element.style.left = "28%";
+		this.element.zIndex = "-1";
 		this.element.style.position = "fixed";
 
 		main.appendChild(this.element);

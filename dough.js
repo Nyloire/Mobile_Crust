@@ -7,6 +7,7 @@ function Dough()
 		this.element.style.width = "32%";
 		this.element.style.bottom = "45%";
 		this.element.style.left = "32%";
+		this.element.style.zIndex = "-1";
 		this.element.style.position = "fixed";
 
 		this.addMouseDown(this.element, this);

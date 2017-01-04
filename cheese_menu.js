@@ -21,7 +21,22 @@ function CheeseMenu()
 
 	this.mouseDown = function()
 	{
-		this.element.style.opacity = .5;
+
+		var cheeseMenu = document.getElementById('cheeseMenu')
+		console.log(cheeseMenu.style.visibility)
+
+		if (cheeseMenu.style.visibility == "visible")
+		{
+			cheeseMenu.style.visibility = "hidden"
+			cheeseMenu.style.position = "fixed"
+			console.log("menu closed")
+		}
+		else if (cheeseMenu.style.visibility == "hidden")
+		{
+			cheeseMenu.style.visibility = "visible"
+			cheeseMenu.style.position = "relative"
+			console.log("menu open")
+		}
 	}
 
 
